@@ -1,0 +1,53 @@
+@keyframes error {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item {
+    list-style-type: none;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    span {
+        text-align: left;
+        margin-right: 20px;
+        font-size: 17px;
+        width: 150px;
+
+    }
+    &_name {
+        font-weight: 700;
+
+    }
+}
+
+button {
+    background: none;
+    border: 1px solid grey;
+}
+
+.service-form {
+    position: relative;
+    
+    &_error {
+        padding: 3px;
+        border: 1px solid red;
+        background-color: white;
+        width: 200px;
+        color: red;
+        display: inline-block;
+        position: absolute;
+        left: calc(50% - 100px);
+        bottom: -50px;
+        animation-duration: 3s;
+        animation-name: error;
+        animation-iteration-count: infinite;
+    }
+}
